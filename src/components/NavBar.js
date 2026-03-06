@@ -3,9 +3,6 @@ import { Link as LinkS } from 'react-scroll';
 import { links } from '../data';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
-import { Link as LinkR } from 'react-router-dom';
-import { Route, Routes } from 'react-router-dom';
-import Main from '../pages/Main';
 
 const NavBar = () => {
   // STATE FOR HAMBURGER MENU
@@ -64,9 +61,8 @@ const NavBar = () => {
   return (
     <header>
       <nav ref={navRef} className='nav-container'>
-        <LinkR to='/'>
-          <img src='./Logo.svg' alt='logo' />
-        </LinkR>
+        <img src='./Logo.svg' alt='logo' />
+
         <ul className='nav-links-container'>{navLinks}</ul>
         {/* HAMBURGER MENU */}
         <div onClick={() => setNav(!nav)}>
@@ -81,11 +77,6 @@ const NavBar = () => {
           />
         </div>
       </nav>
-
-      {/* ROUTES */}
-      <Routes>
-        <Route path='/' element={<Main />} />
-      </Routes>
 
       {/* NAV-ITEMS WHEN HAMBURGER MENU IS ON */}
       {nav && (

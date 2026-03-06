@@ -1,17 +1,21 @@
-import CallToAction from '../components/CallToAction';
+import Hero from '../components/Hero';
 import Specials from '../components/Specials';
 import Testimonials from '../components/Testimonials';
 import About from '../components/About';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
-const Main = () => {
+const HomePage = () => {
   return (
     <main>
-      <CallToAction />
+      <NavBar />
+      <Hero />
       <Specials />
       <Testimonials />
       <About />
+      <Footer />
     </main>
   );
 };
 
-export default Main;
+export default HomePage;
