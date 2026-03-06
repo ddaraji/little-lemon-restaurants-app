@@ -1,8 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link as LinkS } from 'react-scroll';
 import { links } from '../data';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
+import { Link as LinkR } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Main from '../pages/Main';
 
 const NavBar = () => {
   // STATE FOR HAMBURGER MENU
@@ -45,7 +48,7 @@ const NavBar = () => {
   const navLinks = links.map(({ link, id }) => {
     return (
       <li key={id}>
-        <Link
+        <LinkS
           to={link}
           smooth
           duration={550}
@@ -53,7 +56,7 @@ const NavBar = () => {
           className='nav-links'
         >
           {link}
-        </Link>
+        </LinkS>
       </li>
     );
   });
@@ -61,7 +64,9 @@ const NavBar = () => {
   return (
     <header>
       <nav ref={navRef} className='nav-container'>
-        <img src='./Logo.svg' alt='logo' />
+        <LinkR to='/'>
+          <img src='./Logo.svg' alt='logo' />
+        </LinkR>
         <ul className='nav-links-container'>{navLinks}</ul>
         {/* HAMBURGER MENU */}
         <div onClick={() => setNav(!nav)}>
@@ -76,6 +81,11 @@ const NavBar = () => {
           />
         </div>
       </nav>
+
+      {/* ROUTES */}
+      <Routes>
+        <Route path='/' element={<Main />} />
+      </Routes>
 
       {/* NAV-ITEMS WHEN HAMBURGER MENU IS ON */}
       {nav && (
