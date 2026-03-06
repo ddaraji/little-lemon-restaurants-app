@@ -21,11 +21,11 @@ export const links = [
   },
   {
     id: 5,
-    link: 'order online',
+    link: 'testimonials',
   },
   {
     id: 6,
-    link: 'login',
+    link: 'contact',
   },
 ];
 
@@ -34,16 +34,16 @@ export const socialLinks = [
   {
     id: 1,
     child: <FaFacebook size={30} />,
-    href: 'https://linkedin.com/in/mijo-arts',
+    href: 'https://linkedin.com',
   },
   {
     id: 2,
     child: <FaInstagram size={30} />,
-    href: 'https://facebook.com/MiguelAlonzo711',
+    href: 'https://facebook.com/',
   },
   {
     id: 4,
     child: <FaTwitter size={30} />,
-    href: 'mailto:malonzo1321@gmail.com',
+    href: 'https://twitter.com/',
   },
 ];
