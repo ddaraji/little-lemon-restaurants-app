@@ -1,9 +1,10 @@
 import React from 'react';
 import restaurant from '../../assets/restaurant.jpg';
+import './Footer.styles.css';
 
 const Footer = () => {
   return (
-    <footer  name='contact'>
+    <footer name='contact'>
       <nav className='footer-container'>
         <img src={restaurant} className='footer-photo' alt='logo' />
         <ul className='grid-item-nav'>
