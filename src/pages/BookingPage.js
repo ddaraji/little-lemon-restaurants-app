@@ -1,13 +1,20 @@
 import { useReducer } from 'react';
 import BookingForm from '../components/BookingForm/BookingForm';
+import { fetchAPI } from '../utils/temp';
 
-const updateTimes = (state, action) => {
-  // For now, the function can return the same available times regardless of the date.
-  return { ...state };
+export const updateTimes = (state, action) => {
+  switch (action.type) {
+    case 'UPDATE_TIMES':
+      return { ...state, times: fetchAPI(action.date) };
+    default:
+      return state;
+  }
 };
 
-const initializeTimes = () => {
-  return { times: ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'] };
+export const initializeTimes = () => {
+  // create a Date object to represent today's date
+  const today = new Date();
+  return { times: fetchAPI(today) };
 };
 
 const BookingPage = () => {
