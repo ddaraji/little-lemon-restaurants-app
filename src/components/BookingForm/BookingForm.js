@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './BookingForm.styles.css';
 import { submitAPI } from '../../utils/temp';
 import { useNavigate } from 'react-router-dom';
@@ -15,16 +15,14 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     occasion: 'Birthday',
   });
 
-  useEffect(() => {
-    localStorage.setItem('Bookings', JSON.stringify(bookings));
-  }, [bookings]);
-
   // SUBMIT HANDLER
   const handleSubmit = e => {
     e.preventDefault();
 
     // SUBMIT LOGIC
     if ((bookings.date, bookings.time, bookings.guests !== '')) {
+      // Store booking details in localStorage only on submit
+      localStorage.setItem('Bookings', JSON.stringify(bookings));
       submitAPI();
       navigate('/confirmed');
 
