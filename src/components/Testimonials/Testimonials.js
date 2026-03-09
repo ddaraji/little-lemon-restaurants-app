@@ -16,9 +16,9 @@ const Testimonials = () => {
         </div>
         <p className='testimonials-name'>{name}</p>
         <p className='testimonials-description'>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto,
-          reiciendis. Possimus voluptas perspiciatis nisi eveniet odit
-          doloribus.
+          Five stars for the easy booking process! Little Lemon makes it 
+          so simple to plan a night out. 
+          The Mediterranean vibe and excellent service made for a perfect evening.
         </p>
       </div>
     );

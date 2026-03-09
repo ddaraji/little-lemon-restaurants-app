@@ -64,7 +64,7 @@ const NavBar = () => {
       <header ref={navRef}>
         <nav className='nav-container'>
           <LinkS to='hero' smooth duration={550} onClick={handleClick}>
-            <img src='./Logo.svg' alt='logo' />
+            <img src='./Logo.svg' alt='logo' className='logo' />
           </LinkS>
 
           <ul className='nav-links-container'>{navLinks}</ul>
