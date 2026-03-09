@@ -1,8 +1,10 @@
+import BookingForm from '../components/BookingForm/BookingForm';
+
 const BookingPage = () => {
   return (
-    <section name='reservations' className='bookings'>
-      BookingPage
-    </section>
+    <>
+      <BookingForm />
+    </>
   );
 };
 
