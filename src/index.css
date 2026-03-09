@@ -56,8 +56,6 @@ a:active {
   text-decoration: none;
 }
 
-/* BOOKING PAGE */
-.bookings {
-  height: 100vh;
-  padding-top: 5rem;
+body {
+  background-color: #edefee;
 }
