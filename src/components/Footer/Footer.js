@@ -47,7 +47,9 @@ const Footer = () => {
   return (
     <footer name='contact'>
       <nav className='footer-container'>
-        <img src={restaurant} className='footer-photo' alt='logo' />
+        <div className='footer-photo-container'>
+          <img src={restaurant} className='footer-photo' alt='logo' />
+        </div>
         <ul className='grid-item-nav'>
           <p className='footer-title'>Little Lemon</p>
           {navLinks}
@@ -76,6 +78,19 @@ const Footer = () => {
           {socialLinks}
         </ul>
       </nav>
+
+      <p className='copyright'>
+        &copy; Copyright {new Date().getFullYear()}{' '}
+        <a
+          className='linkedin-link'
+          target='_blank'
+          href='https://www.linkedin.com/in/dhaval-daraji-3a2710116/'
+          rel='noreferrer'
+        >
+          Dhaval Daraji
+        </a>
+        . Don't claim as your own.
+      </p>
     </footer>
   );
 };
